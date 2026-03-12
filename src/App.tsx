@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Home } from '@/pages/Home';
+import { SobreNos } from '@/pages/SobreNos';
+import { Servicos } from '@/pages/Servicos';
+import { Contato } from '@/pages/Contato';
+import { Estruturas } from '@/pages/Estruturas';
+import { Estrutura } from '@/pages/Estrutura';
+import { PainelDeLed } from '@/pages/PainelDeLed';
+import { Iluminacao } from '@/pages/Iluminacao';
+import { Palco } from '@/pages/Palco';
+import { TotemDeLed } from '@/pages/TotemDeLed';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
 }
 
-export default App
+function AppLayout() {
+  return (
+    <div className="relative flex min-h-screen flex-col gradient-mesh">
+      <ScrollToTop />
+      <Header />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<SobreNos />} />
+          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/estruturas" element={<Estruturas />} />
+          <Route path="/estrutura" element={<Estrutura />} />
+          <Route path="/painel-de-led" element={<PainelDeLed />} />
+          <Route path="/iluminacao" element={<Iluminacao />} />
+          <Route path="/palco" element={<Palco />} />
+          <Route path="/totem-de-led" element={<TotemDeLed />} />
+        </Routes>
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppLayout />
+    </BrowserRouter>
+  );
+}
+
+export default App;

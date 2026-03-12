@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00FF9D",
+                        "primary-dark": "#00D166",
+                        "accent": "#7c3aed",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#000000",
+                    },
+                    backgroundImage: {
+                        'vibrant-green': 'linear-gradient(to right, #00FF9D, #00D166)',
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }</script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-mesh {
+            background-color: #000000;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 255, 157, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.1) 0px, transparent 50%);
+        }
+        .bg-vibrant-gradient {
+            background: linear-gradient(135deg, #00FF9D 0%, #00D166 100%);
+        }
+        .text-vibrant-gradient {
+            background: linear-gradient(to right, #00FF9D, #00D166);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display selection:bg-primary/30">
+<div class="relative flex min-h-screen flex-col gradient-mesh">
+<header class="sticky top-0 z-50 w-full border-b border-slate-200/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">event_available</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Lub Eventos</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Serviços</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Cases</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sobre</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contato</a>
+</nav>
+<button class="bg-vibrant-gradient hover:brightness-110 text-slate-950 text-sm font-bold px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-[#00FF9D]/20">
+                    Orçamento
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative px-6 md:px-20 lg:px-40 py-16 md:py-28 overflow-hidden">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border text-[#00FF9D] text-xs font-bold uppercase tracking-wider bg-[#00FF9D]/10 border-[#00FF9D]/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            Líder em Produção Audiovisual
+                        </div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-100">
+                            SUA IDEIA, <br/>
+<span class="text-vibrant-gradient">NOSSO COMPROMISSO</span>
+</h1>
+<p class="text-lg text-slate-400 max-w-lg leading-relaxed">
+                            Produção completa para eventos corporativos de alto impacto. Transformamos visões em experiências memoráveis com tecnologia de ponta.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-vibrant-gradient hover:brightness-110 text-slate-950 font-bold px-8 py-4 rounded-xl transition-all flex items-center gap-2 shadow-xl shadow-[#00FF9D]/20">
+                                Contato <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-8 py-4 rounded-xl transition-all border border-slate-700">
+                                Ver Portfólio
+                            </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+<div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+<img alt="Event Setup" class="object-cover w-full h-full" data-alt="Professional corporate stage setup with lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxb0Kt7brpuCdcrtet9lhLtp_zN5SAACKz4PRJNa7kzqEYpgOvtTwsn8rpkhNmKu0goI11gHXx9iF6-GGI7R9mP2C8mx3WyrjWxEUP2zloXm4uhV60bR53yqIEdKof1xVmDGG0L2o4UJJMoExWh04kT2cQA3sVSsH_nf2w8bfLa4QOk1vS0wnvU86XSx19nbrb5fnFaTN_wohq_1UjXMgkp8oYeD_GSdeUrav7bd598Njv_I3C7UVUuiH-XFaH3immld8VGce-yKg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-20 lg:px-40 py-12 bg-slate-900/40">
+<div class="max-w-7xl mx-auto">
+<p class="text-slate-500 text-center text-sm font-bold uppercase tracking-[0.2em] mb-10">Presente nos eventos das maiores empresas</p>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="h-12 flex items-center justify-center">
+<div class="w-24 h-8 bg-slate-700 rounded-md animate-pulse"></div>
+</div>
+<div class="h-12 flex items-center justify-center">
+<div class="w-32 h-8 bg-slate-700 rounded-md animate-pulse"></div>
+</div>
+<div class="h-12 flex items-center justify-center">
+<div class="w-28 h-8 bg-slate-700 rounded-md animate-pulse"></div>
+</div>
+<div class="h-12 flex items-center justify-center">
+<div class="w-20 h-8 bg-slate-700 rounded-md animate-pulse"></div>
+</div>
+<div class="h-12 flex items-center justify-center">
+<div class="w-36 h-8 bg-slate-700 rounded-md animate-pulse"></div>
+</div>
+<div class="h-12 flex items-center justify-center">
+<div class="w-24 h-8 bg-slate-700 rounded-md animate-pulse"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-20 lg:px-40 py-24">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative"><span class="material-symbols-outlined text-[#00FF9D] mb-2">display_settings</span>
+<h3 class="font-bold text-slate-200">Painéis de LED</h3>
+<p class="text-sm text-slate-400">Resolução 4K para máxima definição visual.</p></div>
+<div class="order-1 lg:order-2 flex flex-col gap-6">
+<h2 class="text-4xl font-black text-slate-100 leading-tight">MAIS QUE UMA ENTREGA, <br/><span class="text-[#00FF9D]">UMA SOLUÇÃO</span></h2>
+<p class="text-slate-400 text-lg leading-relaxed">
+                            Nossa abordagem integra criatividade e técnica. Não apenas montamos equipamentos; construímos atmosferas que potencializam a mensagem da sua marca e engajam sua audiência.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+<div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700"><span class="material-symbols-outlined text-[#00FF9D] mb-2">display_settings</span>
+<h3 class="font-bold text-slate-200">Painéis de LED</h3>
+<p class="text-sm text-slate-400">Resolução 4K para máxima definição visual.</p></div>
+<div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700">
+<span class="material-symbols-outlined text-accent mb-2">surround_sound</span>
+<h3 class="font-bold text-slate-200">Sonorização High-End</h3>
+<p class="text-sm text-slate-400">Fidelidade acústica em qualquer ambiente.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-20 lg:px-40 py-24 bg-[#00FF88]/[0.02]">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center mb-16 gap-4">
+<h2 class="text-4xl font-black text-slate-100">NOSSO DIFERENCIAL</h2>
+<p class="text-slate-400 max-w-2xl">Por que escolher a Lub Eventos para o seu próximo grande desafio?</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 p-8 rounded-2xl bg-background-dark border border-slate-800 hover:border-primary/50 transition-colors">
+<div class="size-12 rounded-lg bg-[#00FF9D]/10 flex items-center justify-center text-[#00FF9D]">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h3 class="text-xl font-bold text-slate-100">Qualidade Garantida</h3>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg text-primary-dark">check_circle</span>
+                                    Backup de todos os equipamentos
+                                </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg text-primary-dark">check_circle</span>
+                                    Equipe técnica certificada
+                                </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg text-primary-dark">check_circle</span>
+                                    Equipamentos de última geração
+                                </li>
+</ul>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-2xl bg-background-dark border border-slate-800 hover:border-primary/50 transition-colors">
+<div class="size-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<h3 class="text-xl font-bold text-slate-100">Agilidade e Pontualidade</h3>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+                                    Montagem antecipada
+                                </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+                                    Logística própria eficiente
+                                </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-accent text-lg">check_circle</span>
+                                    Suporte 24/7 durante o evento
+                                </li>
+</ul>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-2xl bg-background-dark border border-slate-800 hover:border-primary/50 transition-colors">
+<div class="size-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<h3 class="text-xl font-bold text-slate-100">Inovação Criativa</h3>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                                    Soluções personalizadas
+                                </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                                    Projetos 3D de pré-visualização
+                                </li>
+<li class="flex items-center gap-3 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                                    Integração de novas tecnologias
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-20 lg:px-40 py-24">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-black text-center mb-16">COMO TRABALHAMOS</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="relative flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-slate-900 flex items-center justify-center text-2xl font-bold text-[#00FF9D] border-4 border-black z-10">01</div>
+<h4 class="text-xl font-bold">Briefing</h4>
+<p class="text-sm text-slate-400">Entendemos suas necessidades e os objetivos do evento.</p>
+<div class="hidden md:block absolute top-8 left-1/2 w-full border-t-2 border-dashed border-slate-700 -z-0"></div>
+</div>
+<div class="relative flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-slate-900 flex items-center justify-center text-2xl font-bold text-[#00FF9D] border-4 border-black z-10">02</div>
+<h4 class="text-xl font-bold">Planejamento</h4>
+<p class="text-sm text-slate-400">Desenvolvemos o projeto técnico e logístico detalhado.</p>
+<div class="hidden md:block absolute top-8 left-1/2 w-full border-t-2 border-dashed border-slate-700 -z-0"></div>
+</div>
+<div class="relative flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-slate-900 flex items-center justify-center text-2xl font-bold text-[#00FF9D] border-4 border-black z-10">03</div>
+<h4 class="text-xl font-bold">Execução</h4>
+<p class="text-sm text-slate-400">Montagem e operação técnica com precisão absoluta.</p>
+<div class="hidden md:block absolute top-8 left-1/2 w-full border-t-2 border-dashed border-slate-700 -z-0"></div>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-slate-900 flex items-center justify-center text-2xl font-bold text-[#00FF9D] border-4 border-black z-10">04</div>
+<h4 class="text-xl font-bold">Suporte</h4>
+<p class="text-sm text-slate-400">Acompanhamento em tempo real para o sucesso total.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-20 lg:px-40 py-24 bg-slate-900/30">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-4xl font-black mb-4">CASES</h2>
+<p class="text-slate-400">Alguns de nossos projetos mais impactantes recentemente.</p>
+</div>
+<div class="flex gap-4">
+<button class="size-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-12 rounded-full bg-vibrant-gradient flex items-center justify-center hover:opacity-90 transition-colors">
+<span class="material-symbols-outlined text-slate-950">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Case 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Grand convention center event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxeenO0tsPdmzDnM6mb8H7EtedkjYqkE8lwQh8cp1qfC6BypyEUMNTmEQfdQMPuxUWZ8dWEEoviVzLiQMl5JfS_61YhbCz0ytHHA50llJeXPdNge7mE43CvCJkPOJlrPyWFEh7AznvU5loAC3SoKf-wwwnpirqe3Khwm1UBl75Amhjt_LTfkVJLGTGozol1_aHiQUKRsS4qSSq76Z5uqKtBRmn5wAzjMqLGVJZ0Xf2gAWPcJtR-f0akO61tULfYhQkvt4Sy_bnn1g"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold mb-2">Congresso Tech 2023</h4>
+<p class="text-slate-500 text-sm">Produção completa para 2.000 participantes em São Paulo.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Case 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Corporate awards night lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyVsN3walT9my1DOfc2mZN0MSkFDL9qq8W3isomTpq94QKNV_ng_OhzomVjg_LkbkW3dcVT6C9x4Yc1t5UOolQsoYXqD4W_0VIf4cOs6RXqwhWwxlpmk7Vn_oyjFqFM09gXolIDM3W1X3gP5kKYiXr3LpzCm2YxcFf2y99NIF-Uy_-dewug84TFWfC0nrkAi8uD_A5MTC2nj5eZyYldWTiMK_WYZdLOTyTXS1H2gd7ADoj2mSwLT4YB7kDCUc0oqku5-qD_ilqOmM"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold mb-2">Prêmio Inovação</h4>
+<p class="text-slate-500 text-sm">Sonorização e iluminação cênica para noite de gala.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Case 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Concert stage with heavy lighting effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6K04apQGDlc0n6qzWjBlDS5EEr1daH08SjhgeoVIqOnKusFEvjOzJXf7g2bkpEfBgMIwA0O9vh-ThtDud5r5vK-XWb9FAmO4N-dcbuLiKDH-BFxxR9pXVfTNLK8chBA3vTk3j1Oj1USrpTZ89m9ynCZzOD3eUAtB2dBURrkk1m1Gjo4NQXMWhJVCM1Tz36M_ZV1V6AfAdc_ZflQGw8lQ9zXsIbNcxW-eprzaiLsqQujYlGRTXg8s2ns6PiCSidaVDsHpC2JJ3Jbo"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold mb-2">Live Experience B2B</h4>
+<p class="text-slate-500 text-sm">Transmissão simultânea e cenografia digital.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t border-slate-800 px-6 md:px-20 lg:px-40 py-20">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-vibrant-gradient rounded flex items-center justify-center text-slate-950">
+<span class="material-symbols-outlined text-xl">event_available</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Lub Eventos</h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                            A parceira ideal para transformar suas ideias em eventos inesquecíveis. Tecnologia, paixão e compromisso com o resultado.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-100">Navegação</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Home</a></li>
+<li><a class="hover:text-primary" href="#">Serviços</a></li>
+<li><a class="hover:text-primary" href="#">Cases</a></li>
+<li><a class="hover:text-primary" href="#">Sobre Nós</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-100">Serviços</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Painéis de LED</a></li>
+<li><a class="hover:text-primary" href="#">Sonorização</a></li>
+<li><a class="hover:text-primary" href="#">Iluminação</a></li>
+<li><a class="hover:text-primary" href="#">Streaming</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-100">Contato</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#00FF9D] text-base">location_on</span>
+<span>Av. Paulista, 1000 - 10º Andar<br/>São Paulo, SP</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00FF9D] text-base">call</span>
+<span>(11) 99999-9999</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00FF9D] text-base">mail</span>
+<span>contato@lubeventos.com.br</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-600 text-xs">© 2024 Lub Eventos. Todos os direitos reservados.</p>
+<div class="flex gap-8 text-xs text-slate-600">
+<a class="hover:text-slate-400 transition-colors" href="#">Política de Privacidade</a>
+<a class="hover:text-slate-400 transition-colors" href="#">Termos de Uso</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
