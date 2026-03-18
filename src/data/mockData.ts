@@ -109,7 +109,18 @@ export const services: ReadonlyArray<ServiceItem> = [
 ];
 
 export const portfolioItems: ReadonlyArray<PortfolioItem> = [
-  { id: "1", title: "Estrutura para Evento", category: "Estruturas", image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_14.26.12.jpeg" },
+  {
+    id: "17",
+    title: "Montagem de Estruturas",
+    category: "Estruturas",
+    image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_19.55.37.jpeg",
+  },
+  {
+    id: "18",
+    title: "Grid de Alumínio",
+    category: "Estruturas",
+    image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_14.26.12.jpeg",
+  },
   { id: "2", title: "Palco com Painel LED", category: "Painel LED", image: "/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_14.26.12.jpeg" },
   { id: "3", title: "Evento com Painel de LED Imersivo", category: "Painel LED", image: "/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_19.58.57.jpeg" },
   { id: "4", title: "Palco MG Locações", category: "Palco", image: "/portfolio/palco/WhatsApp_Image_2026-03-17_at_20.11.12.jpeg" },
@@ -119,7 +130,7 @@ export const portfolioItems: ReadonlyArray<PortfolioItem> = [
   { id: "8", title: "Palco para Show", category: "Palco", image: "/portfolio/palco/WhatsApp_Image_2026-03-17_at_20.27.41.jpeg" },
   { id: "9", title: "Tenda para Evento", category: "Tendas", image: "/portfolio/tenda/WhatsApp_Image_2026-03-17_at_19.53.13.jpeg" },
   { id: "10", title: "Painel LED Corporativo", category: "Painel LED", image: "/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_14.26.13.jpeg" },
-  { id: "11", title: "Estrutura Q25 Montada", category: "Estruturas", image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_19.55.37.jpeg" },
+  { id: "11", title: "Estrutura q30 montada", category: "Estruturas", image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_19.55.37.jpeg" },
   { id: "12", title: "Tenda Elegante", category: "Tendas", image: "/portfolio/tenda/WhatsApp_Image_2026-03-17_at_19.53.26.jpeg" },
 ];
 
@@ -260,13 +271,13 @@ export const estruturaSpecs = {
     name: "Q25",
     description: "Estrutura intermediária versátil para palcos, stands e cenografias com excelente relação custo-benefício.",
     specs: ["Perfil: 250mm x 250mm", "Material: Alumínio", "Carga: até 250kg/m", "Comprimento: até 4m por módulo"],
-    image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_14.26.12_copy.jpeg",
+    image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_14.26.12_copy_2.jpeg", // formerly Q30
   },
   Q30: {
     name: "Q30",
     description: "Box truss de alta capacidade para grandes estruturas, grinds de iluminação e coberturas de palco.",
     specs: ["Perfil: 300mm x 300mm", "Material: Alumínio", "Carga: até 500kg/m", "Comprimento: até 4m por módulo"],
-    image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_14.26.12_copy_2.jpeg",
+    image: "/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_19.55.37.jpeg", // requested image
   },
 };
 export const whatsappNumber = companyInfo.whatsapp;

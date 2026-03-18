@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import { CTASection } from '@/components/CTASection';
 import { PortfolioGallery } from '@/components/PortfolioGallery';
 import { useInView } from '@/hooks/useInView';
 import { heroContents, estruturaSpecs, portfolioItems } from '@/data/mockData';
 import { CheckCircle } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 export function Estruturas() {
   const hero = heroContents.estruturas;
   const [specsRef, specsInView] = useInView(0.1);
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
   const structureItems = portfolioItems.filter((p) => p.category === 'Estruturas');
 
   return (
@@ -43,12 +46,16 @@ export function Estruturas() {
                 style={{ animationDelay: `${i * 150}ms` }}
               >
                 {'image' in spec && spec.image && (
-                  <div className="rounded-lg overflow-hidden mb-4 h-40">
+                  <div 
+                    className="rounded-lg overflow-hidden mb-4 h-40 cursor-pointer group relative"
+                    onClick={() => setSelectedMedia(spec.image)}
+                  >
                     {spec.image.endsWith('.mp4') ? (
-                      <video src={spec.image} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                      <video src={spec.image} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     ) : (
-                      <img src={spec.image} alt={spec.name} className="w-full h-full object-cover" loading="lazy" />
+                      <img src={spec.image} alt={spec.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                     )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 )}
                 <h3 className="text-2xl font-black text-neon mb-2">{spec.name}</h3>
@@ -75,6 +82,21 @@ export function Estruturas() {
         </div>
         <PortfolioGallery items={structureItems} />
       </section>
+
+      {/* Lightbox for Estrutura Specs */}
+      <Dialog open={!!selectedMedia} onOpenChange={() => setSelectedMedia(null)}>
+        <DialogContent className="max-w-4xl bg-card/95 backdrop-blur-xl border-border p-2">
+          {selectedMedia && (
+            <div className="flex items-center justify-center">
+              {selectedMedia.endsWith('.mp4') ? (
+                <video src={selectedMedia} controls autoPlay className="w-full h-auto max-h-[85vh] rounded-lg object-contain bg-black/50" />
+              ) : (
+                <img src={selectedMedia} alt="Media" className="w-full h-auto max-h-[85vh] rounded-lg object-contain bg-black/50" />
+              )}
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <CTASection title="Precisa de estruturas para seu evento?" />
     </>

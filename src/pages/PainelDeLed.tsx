@@ -22,12 +22,12 @@ export function PainelDeLed() {
       ]}
       images={[
         '/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_14.26.12.jpeg',
-        '/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_14.26.12_copy.jpeg',
-        '/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_19.58.57.jpeg',
       ]}
       videos={[
         '/portfolio/painel-led/WhatsApp_Video_2026-03-17_at_20.06.49.mp4',
         '/portfolio/painel-led/WhatsApp_Video_2026-03-17_at_20.27.40.mp4',
+        '/portfolio/painel-led/WhatsApp_Video_2026-03-17_at_20.27.40_copy.mp4',
+        '/portfolio/painel-led/WhatsApp_Video_2026-03-17_at_20.28.23.mp4',
       ]}
       ctaTitle="Quer impactar com painéis de LED?"
     />

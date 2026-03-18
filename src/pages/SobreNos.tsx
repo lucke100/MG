@@ -1,14 +1,17 @@
+import { useState } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import { CTASection } from '@/components/CTASection';
 import { useInView } from '@/hooks/useInView';
 import { heroContents, stats } from '@/data/mockData';
 import { Award, Eye, Target, Shield } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 export function SobreNos() {
   const hero = heroContents.sobre;
   const [histRef, histInView] = useInView(0.1);
   const [missionRef, missionInView] = useInView(0.1);
   const [statsRef, statsInView] = useInView(0.1);
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
 
   return (
     <>
@@ -51,13 +54,13 @@ export function SobreNos() {
                 </p>
               </div>
             </div>
-            <div className="relative group">
+            <div className="relative group cursor-pointer" onClick={() => setSelectedMedia("/portfolio/palco-mg-locacoes.jpg")}>
               <div className="absolute -inset-3 bg-gradient-to-r from-neon/20 to-neon-accent/20 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000" />
               <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl">
                 <img
                   src="/portfolio/palco-mg-locacoes.jpg"
                   alt="MG Locações em ação"
-                  className="w-full h-auto"
+                  className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>
@@ -122,6 +125,17 @@ export function SobreNos() {
       </section>
 
       <CTASection />
+
+      {/* Lightbox for Sobre Nos image */}
+      <Dialog open={!!selectedMedia} onOpenChange={() => setSelectedMedia(null)}>
+        <DialogContent className="max-w-4xl bg-card/95 backdrop-blur-xl border-border p-2">
+          {selectedMedia && (
+            <div className="flex items-center justify-center">
+              <img src={selectedMedia} alt="Media" className="w-full h-auto max-h-[85vh] rounded-lg object-contain bg-black/50" />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

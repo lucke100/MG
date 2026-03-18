@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeroSection } from '@/components/HeroSection';
 import { CTASection } from '@/components/CTASection';
@@ -5,6 +6,7 @@ import { useInView } from '@/hooks/useInView';
 import type { HeroContent } from '@/data/mockData';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 interface ServicePageProps {
   readonly hero: HeroContent;
@@ -29,6 +31,7 @@ export function ServicePage({
 }: ServicePageProps) {
   const [contentRef, contentInView] = useInView(0.1);
   const [galleryRef, galleryInView] = useInView(0.1);
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
 
   return (
     <>
@@ -84,10 +87,11 @@ export function ServicePage({
               {images.map((img, i) => (
                 <div
                   key={`img-${i}`}
-                  className={`relative group overflow-hidden rounded-xl border border-border/50 ${
+                  className={`relative group overflow-hidden rounded-xl border border-border/50 cursor-pointer ${
                     i === 0 ? 'col-span-2' : ''
                   } ${galleryInView ? 'animate-fade-in' : 'opacity-0'}`}
                   style={{ animationDelay: `${i * 100}ms` }}
+                  onClick={() => setSelectedMedia(img)}
                 >
                   <img
                     src={img}
@@ -103,10 +107,11 @@ export function ServicePage({
               {videos && videos.map((vid, i) => (
                 <div
                   key={`vid-${i}`}
-                  className={`relative group overflow-hidden rounded-xl border border-border/50 ${
+                  className={`relative group overflow-hidden rounded-xl border border-border/50 cursor-pointer ${
                     galleryInView ? 'animate-fade-in' : 'opacity-0'
                   }`}
                   style={{ animationDelay: `${(images.length + i) * 100}ms` }}
+                  onClick={() => setSelectedMedia(vid)}
                 >
                   <video
                     src={vid}
@@ -123,6 +128,21 @@ export function ServicePage({
           </div>
         </div>
       </section>
+
+      {/* Lightbox for ServicePage */}
+      <Dialog open={!!selectedMedia} onOpenChange={() => setSelectedMedia(null)}>
+        <DialogContent className="max-w-4xl bg-card/95 backdrop-blur-xl border-border p-2">
+          {selectedMedia && (
+            <div className="flex items-center justify-center">
+              {selectedMedia.endsWith('.mp4') ? (
+                <video src={selectedMedia} controls autoPlay className="w-full h-auto max-h-[85vh] rounded-lg object-contain" />
+              ) : (
+                <img src={selectedMedia} alt="Media" className="w-full h-auto max-h-[85vh] rounded-lg object-contain" />
+              )}
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <CTASection title={ctaTitle} />
     </>

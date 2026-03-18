@@ -25,6 +25,7 @@ export function TotemDeLed() {
       ]}
       videos={[
         '/portfolio/totem-led/WhatsApp_Video_2026-03-17_at_20.28.23.mp4',
+        '/portfolio/totem-led/90d9bda86fc1455e9644316336bc060f.mp4',
       ]}
       ctaTitle="Quer totens de LED no seu evento?"
     />

@@ -49,13 +49,24 @@ export function PortfolioGallery({ items, className = '' }: PortfolioGalleryProp
               style={{ animationDelay: `${index * 80}ms` }}
               onClick={() => setSelectedImage(item)}
             >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
+              <div className="aspect-square overflow-hidden bg-black/20 flex items-center justify-center">
+                {item.image.endsWith('.mp4') ? (
+                  <video
+                    src={item.image}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                )}
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -71,13 +82,22 @@ export function PortfolioGallery({ items, className = '' }: PortfolioGalleryProp
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
           <DialogContent className="max-w-4xl bg-card/95 backdrop-blur-xl border-border p-2">
             {selectedImage && (
-              <div>
-                <img
-                  src={selectedImage.image}
-                  alt={selectedImage.title}
-                  className="w-full h-auto rounded-lg"
-                />
-                <div className="p-4">
+              <div className="flex flex-col">
+                {selectedImage.image.endsWith('.mp4') ? (
+                  <video
+                    src={selectedImage.image}
+                    controls
+                    autoPlay
+                    className="w-full h-auto max-h-[80vh] rounded-lg object-contain bg-black/50"
+                  />
+                ) : (
+                  <img
+                    src={selectedImage.image}
+                    alt={selectedImage.title}
+                    className="w-full h-auto max-h-[80vh] rounded-lg object-contain bg-black/50"
+                  />
+                )}
+                <div className="p-4 bg-card/50 mt-2 rounded-lg">
                   <h3 className="text-lg font-bold">{selectedImage.title}</h3>
                   <p className="text-sm text-neon">{selectedImage.category}</p>
                 </div>
