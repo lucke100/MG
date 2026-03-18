@@ -70,7 +70,7 @@ export const services: ReadonlyArray<ServiceItem> = [
     id: "painel-led",
     title: "Painel de LED",
     description: "Painéis de LED de alta resolução para projeção de conteúdo, cenografia digital e imersão visual completa em eventos corporativos e shows.",
-    image: "/portfolio/painel-led/WhatsApp_Image_2026-03-17_at_14.26.12.jpeg",
+    image: "/portfolio/painel-led/WhatsApp_Image_2026-03-18_at_14.13.48.jpeg",
     href: "/painel-de-led",
     icon: "Monitor",
   },
