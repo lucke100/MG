@@ -63,7 +63,7 @@ export function Header({ className = '' }: HeaderProps) {
               className="w-80 bg-background/95 backdrop-blur-xl border-border"
             >
               <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
-              <div className="flex flex-col gap-4 mt-8">
+              <div className="flex flex-col gap-4 mt-8 px-4">
                 <Link to="/" className="mb-4">
                   <img src="/logo.png" alt="MG Locações" className="h-10 w-auto object-contain" />
                 </Link>

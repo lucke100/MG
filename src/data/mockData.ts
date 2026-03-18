@@ -236,8 +236,8 @@ export const heroContents: Record<string, HeroContent> = {
 };
 
 export const stats = [
-  { value: "500+", label: "Eventos Realizados" },
-  { value: "15+", label: "Anos de Experiência" },
+  { value: "2000+", label: "Eventos Realizados" },
+  { value: "30+", label: "Anos de Experiência" },
   { value: "100%", label: "Clientes Satisfeitos" },
   { value: "50+", label: "Equipamentos" },
 ];
