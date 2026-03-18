@@ -49,7 +49,7 @@ export function Contato() {
                   { icon: MessageCircle, label: 'WhatsApp', value: companyInfo.phone, href: `https://wa.me/${companyInfo.whatsapp}` },
                   { icon: Mail, label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}` },
                   { icon: MapPin, label: 'Endereço', value: companyInfo.address, href: '#' },
-                  { icon: Clock, label: 'Horário', value: 'Seg - Sex: 8h às 18h | Sáb: 8h às 13h', href: '#' },
+                  { icon: Clock, label: 'Horário', value: 'Seg - Sex: 09h às 18h | Sáb: 09h às 13h', href: '#' },
                 ].map((item) => (
                   <a
                     key={item.label}

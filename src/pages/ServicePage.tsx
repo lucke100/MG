@@ -13,6 +13,7 @@ interface ServicePageProps {
   readonly description: ReadonlyArray<string>;
   readonly features: ReadonlyArray<string>;
   readonly images: ReadonlyArray<string>;
+  readonly videos?: ReadonlyArray<string>;
   readonly ctaTitle?: string;
 }
 
@@ -23,6 +24,7 @@ export function ServicePage({
   description,
   features,
   images,
+  videos,
   ctaTitle,
 }: ServicePageProps) {
   const [contentRef, contentInView] = useInView(0.1);
@@ -81,7 +83,7 @@ export function ServicePage({
             <div ref={galleryRef} className="grid grid-cols-2 gap-4">
               {images.map((img, i) => (
                 <div
-                  key={i}
+                  key={`img-${i}`}
                   className={`relative group overflow-hidden rounded-xl border border-border/50 ${
                     i === 0 ? 'col-span-2' : ''
                   } ${galleryInView ? 'animate-fade-in' : 'opacity-0'}`}
@@ -94,6 +96,25 @@ export function ServicePage({
                       i === 0 ? 'h-64' : 'h-48'
                     }`}
                     loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              ))}
+              {videos && videos.map((vid, i) => (
+                <div
+                  key={`vid-${i}`}
+                  className={`relative group overflow-hidden rounded-xl border border-border/50 ${
+                    galleryInView ? 'animate-fade-in' : 'opacity-0'
+                  }`}
+                  style={{ animationDelay: `${(images.length + i) * 100}ms` }}
+                >
+                  <video
+                    src={vid}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>

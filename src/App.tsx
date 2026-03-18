@@ -12,6 +12,7 @@ import { PainelDeLed } from '@/pages/PainelDeLed';
 import { Iluminacao } from '@/pages/Iluminacao';
 import { Palco } from '@/pages/Palco';
 import { TotemDeLed } from '@/pages/TotemDeLed';
+import { Tendas } from '@/pages/Tendas';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
 function ScrollToTop() {
@@ -39,6 +40,7 @@ function AppLayout() {
           <Route path="/iluminacao" element={<Iluminacao />} />
           <Route path="/palco" element={<Palco />} />
           <Route path="/totem-de-led" element={<TotemDeLed />} />
+          <Route path="/tendas" element={<Tendas />} />
         </Routes>
       </main>
       <Footer />

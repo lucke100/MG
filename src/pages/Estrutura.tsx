@@ -21,9 +21,12 @@ export function Estrutura() {
         'Laudo técnico de engenharia',
       ]}
       images={[
-        '/portfolio/estrutura-q25.jpeg',
-        '/portfolio/montagem-trelica.jpg',
-        '/portfolio/estrutura-q30.jpeg',
+        '/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_19.55.37.jpeg',
+        '/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_14.26.12.jpeg',
+        '/portfolio/estruturas/WhatsApp_Image_2026-03-17_at_20.28.22.jpeg',
+      ]}
+      videos={[
+        '/portfolio/estruturas/WhatsApp_Video_2026-03-17_at_20.28.23.mp4',
       ]}
       ctaTitle="Precisa de uma estrutura completa?"
     />

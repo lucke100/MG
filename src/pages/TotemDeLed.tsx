@@ -10,20 +10,21 @@ export function TotemDeLed() {
       description={[
         'Os totens de LED da MG Locações são a solução perfeita para sinalização, publicidade e branding em eventos corporativos, feiras, convenções e festas.',
         'Com design elegante e tela de alta resolução, nossos totens exibem conteúdo dinâmico que captura a atenção do público. São portáteis, fáceis de posicionar e proporcionam alto impacto visual.',
-        'Oferecemos totens em diferentes tamanhos e formatos, com gerenciamento de conteúdo em tempo real e suporte técnico durante todo o evento.',
+        'Oferecemos totens com gerenciamento de conteúdo em tempo real e suporte técnico durante todo o evento.',
       ]}
       features={[
         'Tela LED de alta resolução',
         'Design portátil com rodízios',
         'Gerenciamento de conteúdo em tempo real',
-        'Diferentes tamanhos disponíveis',
+        'Medidas em 1,94cm x 64cm',
         'Branding personalizado',
         'Suporte técnico durante o evento',
       ]}
       images={[
-        '/portfolio/totem-led-mg.jpg',
-        '/portfolio/palco-mg-locacoes.jpg',
-        '/portfolio/painel-led-evento.jpg',
+        '/portfolio/totem-led/WhatsApp_Image_2026-03-17_at_19.53.12.jpeg',
+      ]}
+      videos={[
+        '/portfolio/totem-led/WhatsApp_Video_2026-03-17_at_20.28.23.mp4',
       ]}
       ctaTitle="Quer totens de LED no seu evento?"
     />

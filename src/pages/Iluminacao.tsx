@@ -14,7 +14,7 @@ export function Iluminacao() {
       ]}
       features={[
         'Moving heads Beam, Spot e Wash',
-        'Par LED RGBW e efeitos especiais',
+        'LED RGBWA-UV e efeitos especiais',
         'Mesas de luz profissionais (GrandMA, Avolites)',
         'Máquina de fumaça e haze',
         'Projeto luminotécnico personalizado',
@@ -24,6 +24,10 @@ export function Iluminacao() {
         '/portfolio/iluminacao-profissional.jpg',
         '/portfolio/palco-led-mg.jpg',
         '/portfolio/palco-mg-locacoes.jpg',
+      ]}
+      videos={[
+        '/portfolio/iluminacao/WhatsApp_Video_2026-03-17_at_20.27.40.mp4',
+        '/portfolio/iluminacao/WhatsApp_Video_2026-03-17_at_20.28.23.mp4',
       ]}
       ctaTitle="Quer uma iluminação impactante?"
     />
